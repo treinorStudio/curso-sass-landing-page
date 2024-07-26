@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFEFE7;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  width: auto;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #7C6A0A;
+  padding: 15px;
+}
+nav p {
+  font-size: 1.2rem;
+  padding-left: 20px;
+}
+nav .icons {
+  display: flex;
+  gap: 10px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+
+article {
+  color: #7C6A0A;
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+article .impact-section {
+  width: 50vw;
+}
+article .impact-section h1 {
+  font-size: 1.8em;
+}
+article .impact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 65px;
+}
+article .impact-section button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FA9500;
+  border: 0px;
+  border-radius: 50px;
+  padding: 0.8rem;
+  color: white;
+  width: 150px;
+  margin-bottom: 65px;
+}
+article .impact-section button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+article .impact-section button img {
+  padding-left: 7px;
+  height: 18px;
+}
+article .image-section {
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+article .image-section img {
+  width: 25vw;
+  height: 100%;
+  border-radius: 8px;
+}
+
+main {
+  background-color: #FFEFE7;
+}
+
+section {
+  width: auto;
+  height: auto;
+  padding: 30px;
+}
+section h2 {
+  color: #7C6A0A;
+  font-size: 2em;
+}
+section .healthcare, section .furniture {
+  padding-bottom: 60px;
+}
+section .healthcare h2, section .furniture h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0;
+  padding-bottom: 60px;
+}
+section .healthcare .card-section, section .furniture .card-section {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 130px;
+       column-gap: 130px;
+  row-gap: 80px;
+}
+section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
+  width: 17vw;
+  height: 45vh;
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+  padding: 14px;
+  border-radius: 8px;
+}
+section .healthcare .card-section .product-card .icon, section .furniture .card-section .product-card .icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 8px;
+}
+section .healthcare .card-section .product-card .icon svg, section .furniture .card-section .product-card .icon svg {
+  width: 20px;
+  height: 20px;
+}
+section .healthcare .card-section .product-card .icon svg path, section .furniture .card-section .product-card .icon svg path {
+  stroke: salmon;
+}
+section .healthcare .card-section .product-card .product-image, section .furniture .card-section .product-card .product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+section .healthcare .card-section .product-card .product-image img, section .furniture .card-section .product-card .product-image img {
+  width: 12vw;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+section .healthcare .card-section .product-card h3, section .furniture .card-section .product-card h3 {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+  padding-left: 22px;
+}
+section .healthcare .card-section .product-card p, section .furniture .card-section .product-card p {
+  padding-left: 22px;
+  margin: 0;
+  font-size: 0.7rem;
+}
+section .furniture .card-section .product-card {
+  background-color: #BABD8D;
+  color: white;
+}
+
+.about-us {
+  padding-bottom: 60px;
+  width: auto;
+}
+.about-us h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.about-us .mission-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-us .mission-section .earth, .about-us .mission-section .innovation {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  color: #E86424;
+}
+.about-us .mission-section .earth img, .about-us .mission-section .innovation img {
+  width: 30%;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-us .mission-section .earth p, .about-us .mission-section .innovation p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.gallery h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.gallery .gallery-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.gallery .gallery-images img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5px 50%;
+     object-position: 5px 50%;
+  border-radius: 16px;
+}
+.gallery .gallery-images img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
+.location {
+  color: #E86424;
+}
+.location h2 {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.location .map img {
+  width: 100%;
+}
+.location h3, .location p {
+  font-size: 1.2rem;
+}
+
+footer {
+  margin: 0;
+  background-color: #FA9500;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+footer .footer-container {
+  padding: 40px;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 40px;
+}/*# sourceMappingURL=main.css.map */
