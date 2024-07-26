@@ -1,8 +1,13 @@
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #FFEFE7;
   font-family: "IBM Plex Sans", sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 nav {
@@ -16,7 +21,7 @@ nav {
   padding: 15px;
 }
 nav p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding-left: 20px;
 }
 nav .icons {
@@ -30,20 +35,19 @@ nav .icons button {
 
 article {
   color: #7C6A0A;
-  width: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 article .impact-section {
-  width: 50vw;
+  width: 40%;
 }
 article .impact-section h1 {
   font-size: 1.8em;
 }
 article .impact-section p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 65px;
 }
 article .impact-section button {
@@ -69,15 +73,18 @@ article .impact-section button img {
   height: 18px;
 }
 article .image-section {
-  width: 50vw;
+  width: 40%;
+  height: 100px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 article .image-section img {
-  width: 25vw;
-  height: 100%;
-  border-radius: 8px;
+  width: 100%;
+  height: 440px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main {
@@ -115,12 +122,13 @@ section .healthcare .card-section, section .furniture .card-section {
   row-gap: 80px;
 }
 section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
-  width: 17vw;
-  height: 45vh;
+  width: 150px;
+  height: 280px;
   background-color: #FFDAC6;
   color: #7C6A0A;
   padding: 14px;
   border-radius: 8px;
+  box-shadow: 0 0 7px rgb(215, 207, 207);
 }
 section .healthcare .card-section .product-card .icon, section .furniture .card-section .product-card .icon {
   width: 100%;
@@ -138,15 +146,14 @@ section .healthcare .card-section .product-card .icon svg path, section .furnitu
 section .healthcare .card-section .product-card .product-image, section .furniture .card-section .product-card .product-image {
   width: 100%;
   height: auto;
-  margin-bottom: 8px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 section .healthcare .card-section .product-card .product-image img, section .furniture .card-section .product-card .product-image img {
-  width: 12vw;
-  height: 30vh;
+  width: 100%;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 6px;
@@ -154,12 +161,13 @@ section .healthcare .card-section .product-card .product-image img, section .fur
 section .healthcare .card-section .product-card h3, section .furniture .card-section .product-card h3 {
   font-weight: bold;
   font-size: 16px;
-  margin-bottom: 6px;
-  padding-left: 22px;
+  margin-top: 6px;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 section .healthcare .card-section .product-card p, section .furniture .card-section .product-card p {
-  padding-left: 22px;
-  margin: 0;
+  margin-top: 0;
+  padding-left: 0px;
   font-size: 0.7rem;
 }
 section .furniture .card-section .product-card {
@@ -195,7 +203,7 @@ section .furniture .card-section .product-card {
 }
 .about-us .mission-section .earth p, .about-us .mission-section .innovation p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .gallery h2 {
   font-weight: bold;
@@ -240,7 +248,7 @@ section .furniture .card-section .product-card {
   width: 100%;
 }
 .location h3, .location p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 footer {
@@ -260,4 +268,48 @@ footer .social-media {
   align-items: center;
   gap: 40px;
   padding-bottom: 40px;
+}
+
+@media (max-width: 650px) {
+  nav {
+    width: auto;
+  }
+  article {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    padding: 0 30px 30px 30px;
+  }
+  article .impact-section {
+    width: auto;
+  }
+  article .impact-section p {
+    margin-bottom: 25px;
+  }
+  article .impact-section button {
+    margin-bottom: 40px;
+  }
+  article .image-section {
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+  }
+  article .image-section img {
+    width: 80%;
+    height: 309px;
+    -o-object-position: -3px 47%;
+       object-position: -3px 47%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .gallery .gallery-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .gallery .gallery-images img {
+    height: 200px;
+  }
+  .about-us .mission-section {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

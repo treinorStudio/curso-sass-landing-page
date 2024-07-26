@@ -4,7 +4,7 @@ $tertiary-color: #BABD8D;
 $primary-text-color: #7C6A0A;
 $quaternary-color: #FA9500;
 $font-stack: "IBM Plex Sans", sans-serif;
-$paragraph-size: 1.2rem;
+$paragraph-size: 1.3rem;
 
 @mixin flexCenter($direction,$content,$align){
 	display: flex;
@@ -21,10 +21,13 @@ $paragraph-size: 1.2rem;
 }
 
 body {
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: $primary-color;
     font-family: $font-stack;
+    box-sizing: border-box;
+    @include flexCenter(column, center,null );
 }
 
 nav {
@@ -53,16 +56,19 @@ nav {
 
 article {
     color: $primary-text-color;
-    width: auto; // igual espacio a la izquierda y derecha
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 100%;
+    // margin: 0 auto; // igual espacio a la izquierda y derecha
+    // padding-left: 40px;
+    // padding-right: 40px;
+    
     // background-color: rgb(255, 172, 172);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
 
     .impact-section {
         // background-color: whitesmoke;
-        width: 50vw;
+        width: 40%;
 
         h1 {
             font-size: 1.8em;
@@ -88,23 +94,24 @@ article {
             }
             img {
                 padding-left: 7px;
-                height: 18px;              
+                height: 18px;       
             }
         }
     }
 
     .image-section {
-        width: 50vw;
+        width: 40%;
+        height: 100px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         // background-color: #FFDAC6;
         img{
-            width: 25vw;
-            height: 100%;
-            border-radius: 8px;
-            // object-fit: contain;
-            // object-fit: cover;
+            width: 100%;
+            height: 440px;
+            border-radius: 30px;
+        // object-fit: contain;
+            object-fit: cover;
          }       
     }
 }
@@ -143,12 +150,13 @@ section{
 			row-gap: 80px;
 		
             .product-card{
-                width: 17vw;
-                height: 45vh;
+                width: 150px;
+                height: 280px;
                 background-color: $secondary-color;
                 color: $primary-text-color;
                 padding: 14px;
                 border-radius: 8px;
+                box-shadow: 0 0 7px rgb(215, 207, 207);
                 .icon{
                     width: 100%;
                     display: flex;
@@ -165,15 +173,15 @@ section{
                 .product-image{
                     width: 100%;
                     height: auto;
-                    margin-bottom: 8px;
+                    // margin-bottom: 8px;
 
                     @include flexCenter(row, center , center );
                     // display: flex;
                     // justify-content: center;
                     // align-items: center;
                     img{
-                        width: 12vw;
-                        height: 30vh;
+                        width: 100%;
+                        height: 180px;
                         object-fit: cover;
                         border-radius: 6px;
                     }
@@ -181,14 +189,15 @@ section{
                 h3{
                     font-weight: bold;
                     font-size: 16px;
-                    margin-bottom: 6px;
-                    // padding: 0;
-                    padding-left: 22px;
+                    margin-top: 6px;
+                    padding-left: 0px;
+                    margin-bottom: 0px;
                     // padding-bottom: 30px;
                 }
                 p {
-                    padding-left: 22px;
-                    margin: 0;
+                    // margin-bottom: 6px;
+                    margin-top: 0;
+                    padding-left: 0px;
                     font-size: 0.7rem;
                 }
 		    }
@@ -300,8 +309,60 @@ footer{
 		@include flexCenter(row,center,center);
 		gap:40px;
 		padding-bottom: 40px;
-
 	}
+}
+
+@media (max-width: 650px) {
+
+    nav {
+        width: auto;
+    }
+
+    article {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        padding: 0 30px 30px 30px;
+      
+        .impact-section {
+            width: auto;
+            
+            p {
+                margin-bottom: 25px;
+            }
+
+            button {
+                margin-bottom: 40px;
+            }
+        }
+
+        .image-section {
+            width: 100%;
+            height: 300px;
+            justify-content: center;
+            img {
+                width: 80%;
+                height: 309px;
+                object-position: -3px 47%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .gallery {
+        
+        .gallery-images {
+            flex-direction: column;
+            gap: 10px;
+                img {
+                    height: 200px;
+                }
+        }
+    }
+
+    .about-us .mission-section {
+        flex-direction: column;
+    }
 }
 
 // footer{
